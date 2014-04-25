@@ -11,7 +11,6 @@ class DiscussionsController < ApplicationController
     @comments = @discussion.comments.recent
     @comment = Comment.new
     @content = @discussion.content
-    @anarchy = anarchy_mode?
   end
 
   def create
@@ -40,9 +39,4 @@ class DiscussionsController < ApplicationController
   def discussion_params
     params.require(:discussion).permit(:name)
   end
-
-  def anarchy_mode?
-    params[:anarchy_mode]
-  end
-
 end
