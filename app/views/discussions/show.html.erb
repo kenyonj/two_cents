@@ -18,11 +18,7 @@
     var newComment = comment.body.replace(/[&<>'"]/g, function(character) {
       return MAP[character];
     });
-    <% if @anarchy %>
-      template += comment.body;
-    <% else %>
-      template += newComment;
-    <% end %>
+    template += newComment;
     template += " ";
     template += moment(comment.created_at).fromNow();
     template += "\<br\>"
