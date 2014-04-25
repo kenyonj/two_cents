@@ -15,4 +15,6 @@ class Audio < ActiveRecord::Base
       message:
         'needs to be one of these extensions: mp3, ogg, or wav.'
     }
+
+  do_not_validate_attachment_file_type :subject
 end
