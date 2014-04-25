@@ -11,7 +11,7 @@ gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'clearance'
-gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'unicorn-rails'
 gem 'pusher'
 gem 'aws-sdk'
