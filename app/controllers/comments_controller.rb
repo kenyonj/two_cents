@@ -3,8 +3,12 @@ class CommentsController < ApplicationController
 
   def create
     discussion = find_discussion
-    comment = discussion.comments.create(comment_params)
-    process_comment(comment)
+    if discussion.open?
+      comment = discussion.comments.create(comment_params)
+      process_comment(comment)
+    else
+      render :closed
+    end
   end
 
   private
