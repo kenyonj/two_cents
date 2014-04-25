@@ -14,15 +14,5 @@ class Audio < ActiveRecord::Base
       ],
       message:
         'needs to be one of these extensions: mp3, ogg, or wav.'
-    },
-    content_type: {
-      content_type: [
-        "application/octet-stream",
-        "audio/mpeg",
-        "audio/ogg",
-        "audio/vnd.wave"
-      ],
-      message:
-        'needs to be an audio file.'
     }
 end
